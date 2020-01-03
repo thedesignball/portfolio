@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<!-- A digitalobliquity template design -->
+
+<!-- page title : update for each page within the site -->
+	<title>Your Results</title>
+<!-- interaction : close window -->	
+       <script type="text/javascript" src="../../../shared/js/jquery.js"></script>
+       <script type="text/javascript" src="../../../shared/js/jquery.cookie.js"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			$(document).ready(function() {    
+	  			var result=0;
+	  			var qresult= new Array();
+	  			var str="";
+	  			for(var i=1;i<=7;i++)
+	  			{
+	  				//alert("Q: "+i+": "+$.cookie("quiz"+i));
+	  				if($.cookie("quiz"+i)=="true")
+	  				{
+	  					result++;
+	  					qresult[i-1]="<img src='../../../shared/images/quiz_tick.png' title='T' height='15' style='float:left;'/>- Question "+i +" - ";
+	  				} else
+	  				{
+	  					qresult[i-1]="<img src='../../../shared/images/quiz_cross.png' title='F' height='15' style='float:left;'>- Question </span>"+i +" - ";
+	  				}
+	  				$.cookie("quiz"+i,null);
+	  			}
+	  			if(result==7) 
+	  				str='<p>You scored 7 out of 7 (100%). Congratulations!</p>';
+	  			else
+	  			{
+	  				str='<p>You scored '+result+' out of 7 ('+Math.round(result*100/7)+'%).</p>';
+	  				str+="<p>"+qresult[0]+"Cleaning and maintaining your equipment</p>";
+	  				str+="<p>"+qresult[1]+"Cleaning and maintaining your equipment</p>";
+	  				str+="<p>"+qresult[2]+"The cleaning storage area</p>";
+	  				str+="<p>"+qresult[3]+"Keywords</p>";
+	  				str+="<p>"+qresult[4]+"Layout of the cleaning storage area</p>";
+	  				str+="<p>"+qresult[5]+"Safety in the cleaning storage area</p>";
+	  				str+="<p>"+qresult[6]+"Safety in the cleaning storage area</p><br />";
+	  				str+="<p>Have a look at the resources to learn more and then try the quiz again. </p>";
+					str+='<p><a href="quiz1.htm">Try quiz again</a></p>';					
+	  			}
+	  			$("#results").html(str);
+			});
+		/* ]]> */
+		</script>
+		
+<!-- use/import style sheets -->
+	<link rel="stylesheet" type="text/css" title="default" href="../../../shared/css/css2.css" />
+
+<!-- generic site meta data -->
+       <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+       <meta http-equiv="Content-script-type" content="text/javascript" />
+       <meta http-equiv="imagetoolbar" content="false" />
+       <meta name="type" content="Text" />
+
+       <meta name="format" content="(SCHEME=IMT) text/html" />
+       <meta name="language" content="(SCHEME=ISO639-1) en" />
+
+       <meta name="publisher" content="Australian Flexible Learning Framework" />
+       <meta name="rights" content="Licensed under AEShareNet - S Licence: http://www.aesharenet.com.au/S4/" />
+       <meta name="copyright" content="Commonwealth of Australia (c) 2010" />
+       <meta name="robots" content="index,follow" />
+       <meta name="MSSmartTagsPreventParsing" content="true" />
+       <meta name="rating" content="general" />
+		
+<!-- specific page meta data : update for each page within the site -->	
+	<meta name="title" content="SqueakeClean Toolbox: Your Results" />
+	<meta name="title.alternative" content="SqueakeClean Toolbox: Your Results" />
+	<meta name="identifier" content="quiz8.htm" />
+	<meta name="author" content="eLearning Catalyst, The Strategic Learning Curve" />
+	<meta name="creator.corporatename" content="BrightCookie.com, eLearning Catalyst, The Strategic Learning Curve, We-Learn" />
+	<meta name="date.created" content="2010-07-15" />
+
+	<meta name="date.x-metadatalastmodified" content="(SCHEME=ISO8601) 2010-07-15" />
+	<meta name="subject" content="Squeak eClean Toolbox: Your Results" />
+	<meta name="description" content="Squeak eClean Toolbox, quiz, results, scored, question, try, again" />
+	<meta name="keywords" content="Squeak eClean Toolbox, quiz, results, scored, question, try, again" />
+
+<!-- page specific styles -->
+	<style type="text/css">
+	<!--
+	-->
+	</style>
+	
+</head>
+<body onload="window.defaultStatus='SqueakEClean Toolbox: Template'">
+
+<!-- site container start -->
+<div id="container" class="learn"><!-- change class for tab variations-->
+
+
+	<!-- site header start -->	
+	<div id="headerpopup">
+		<div id="headerimg"><a href="" title=""><img src="../../../shared/images/seq_logo.gif" height="60" width="126" alt="Squeak eClean" /></a><!-- logo image and link to entry page -->
+		
+
+		</div>
+	</div>
+
+	<!-- toolbox content start -->	
+	<div id="content">
+		
+		<!-- site topNav start-->
+
+		
+		<!-- contentArea start-->
+		<div id="contentArea" class="popup">
+			
+			<!-- banner start -->
+
+			<!-- bodyContent start -->
+
+			<div id="bodyContent" class="popup">
+				<h1><img src="../../../shared/images/cleaner2.jpg" width="204" height="250" alt="smiling cleaner" class="noborder" align="right" />Quiz -  Organise the cleaning storage area</h1>
+			  <h2>Your Results</h2>
+				<div id="results">
+				</div>
+			</div>	
+		
+			<!-- contentNav start -->
+			
+			<div class="clear">&#160;</div>
+			
+		</div>
+		
+		<!-- pageFooter start -->
+		<div id="pageFooter">
+			<ul>
+				<li class="first">&#169; Commonwealth of Australia 2010 </li>
+				<li>Licensed under AEShareNet Share and Return licence</li>
+			</ul>
+		</div>			
+		
+	</div>
+
+	<!-- site footer start -->	
+	<div id="footer">
+		&#160; <!-- non-breaking space -->
+	</div>
+
+</div>
+
+</body>
+</html>

@@ -503,7 +503,10 @@ iframe {
     font-family: Helvetica;
     height: 60%;
   }
-  .collapse:not(.show) {
+.navbar .collapse:not(.show) {
+      display: contents !important;
+    }
+  .container .collapse:not(.show) {
       display: none;
     }
   .collapse button{
@@ -511,7 +514,9 @@ iframe {
     float: right;
     font-size: 1em;
   }
-
+  .nav-link {
+      padding: .5rem 0 .5rem 2rem  !important;
+    }
 .collapse img{
   width: 100%;
   padding-bottom: 1em;

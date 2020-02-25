@@ -8,13 +8,15 @@ body {
     font-weight: 200;
 }
 
-
+.greybg{
+    background-color: #a5a5d5 !important;
+}
 h1{
   font-family: Helvetica;
   text-decoration: uppercase;
   color: #0e0e0e;
   padding-top: 0;
-  margin-left: -7px;
+  margin-left: 0;
   color: #fff;
 }
 .studybox h2{
@@ -24,8 +26,11 @@ h1{
   color: dimgrey;
   opacity: 30
 }
+.card .btn-link{
+  color: #333;
+}
 .display-1{
-  font-size: 6em;
+  font-size: 3em;
   font-weight: initial;
 }
 .page-header {
@@ -58,14 +63,27 @@ h1{
     border: 1px solid transparent;
     text-transform: uppercase;
 }
+.navbar-brand{
+float: right;
+  font-size: 1.1em;
+}
 .nav-item{
-  width: 10em;
+  width: 12em;
   text-transform: uppercase;
 }
-
-
+li .nav-item .active{
+  /*width: 10em;*/
+  font-weight: bold !important;
+}
+.nav-right{
+  float: right;
+}
 .navbar-light .navbar-brand {
     color: rgba(0,0,0,.5);
+}
+.mr-auto, .mx-auto {
+  margin: 0;
+  /*margin-right: auto !important;*/
 }
 @media (min-width: 1200px)
 .container {
@@ -239,26 +257,50 @@ h1{
     color: #2FBAD1 !important;
     margin-left: 40px;
   }
-
+h3{
+  font-size: 1.3em !important;
+  color: #86c4e4;
+}
 .context{
   color: #fff;
   padding-top: 4em;
 }
 .context p {
   font-weight: 400 !important;
-  width: 50%;
+  width: 70%;
 }
 .project{
-  text-decoration-line: underline;
+  margin-top: 3em;
+}
+.project-title{
+ text-decoration-line: underline;
   font-size: 0.8em;
   font-weight: bold;
   text-transform: uppercase;
 }
 .content{
   /*padding: 10px;*/
-  margin: 5em 0;
+  margin: 0 0 1em 0;
   width: 100%;
   height: auto;
+  max-width: 1050px;
+}
+.content span{
+  margin: 1em 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1em;
+  line-height: 1.42857143;
+  color: #fff;
+  font-weight: 200;
+  padding-top: 1em;
+}
+.fontcolor_blue{
+  color: #0072b1;
+  font-style: normal;
+  text-transform: uppercase;
+  font-kerning: auto;
+  font-size: 0.92em;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif";
 }
 .border {
   border: 8px solid #fff !important;
@@ -273,7 +315,7 @@ iframe {
     width: 100%;
     height: 40em;
     float: right;
-    margin: 2em 0 5em 0;
+    margin: 0 0 2em 0;
     border-style: inset;
     border-color: initial;
     border-image: initial;
@@ -284,7 +326,7 @@ iframe {
   color: #86c4e4;
   line-height: inherit;
   font-size: 0.7em;
-
+  width: inherit;
 }
 
 
@@ -393,8 +435,25 @@ iframe {
   .studybox button:hover::after, button:hover::before{
     -webkit-transform: scale(1);
   }
-
-
+  .card-body p{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #737070;
+    font-weight: 400;
+  }
+.smallcard{
+  width: 100%;
+  margin: 0 0 2em 0;
+  display: inline-block;
+}
+.smallcard .video{
+  width: 75%;
+}
+.collapse .sns_image img {
+  width: 24.5% !important;
+  margin-right: 0.2em;
+}
   /*study 001 slider */
   .slider{
     width: 640px;
@@ -444,7 +503,39 @@ iframe {
     font-family: Helvetica;
     height: 60%;
   }
+  .collapse:not(.show) {
+      display: none;
+    }
+  .collapse button{
+    width: 5em;
+    float: right;
+    font-size: 1em;
+  }
 
+.collapse img{
+  width: 100%;
+  padding-bottom: 1em;
+
+}
+.figcaption{
+  letter-spacing: normal;
+}
+.card-body{
+  padding: 2em 2em 3em 2em;
+  display: inline-block;
+}
+  /*
+.accordion>.card:first-of-type,
+.accordion>.card:not(:first-of-type):not(:last-of-type)
+ {
+  background: transparent !important;
+}
+.accordion>.card:last-of-type {
+  background: transparent;
+}
+
+
+*/
   #panel-collapse{
     max-height: 0;
     overflow: hidden;
